@@ -254,7 +254,7 @@ export default function Home() {
                 </li>
               ))}
             </ul>
-            <Link href="/contact" className="inline-block mt-8 bg-brand-navy text-white px-6 py-3 rounded-full font-bold hover:bg-brand-blue transition-all">
+            <Link href="/contact" className="inline-block mt-8 bg-[#1A5C8A] text-white px-8 py-4 rounded-full font-bold hover:bg-[#0D3A5C] transition-all shadow-lg text-center text-base">
               Set Up Your Bot &rarr;
             </Link>
           </div>
