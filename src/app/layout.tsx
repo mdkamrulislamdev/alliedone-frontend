@@ -6,7 +6,7 @@ import "./globals.css";
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: "Allied One | AI & Digital Solutions",
+  title: "AlliedOne | AI & Digital Solutions",
   description: "Enterprise AI Automation, Consulting, and Digital Marketing",
 };
 
@@ -17,76 +17,119 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={`${inter.className} bg-brand-light text-slate-900 flex flex-col min-h-screen`}>
-        
-        {/* Professional Navigation */}
-        <nav className="bg-white border-b border-slate-200 sticky top-0 z-50">
-          <div className="flex justify-between items-center p-5 max-w-7xl mx-auto">
+      <body className={`${inter.className} bg-brand-slate text-brand-dark flex flex-col min-h-screen antialiased`}>
+
+        {/* ── Sticky Navigation ── */}
+        <nav className="bg-white border-b border-slate-200 sticky top-0 z-50 shadow-card">
+          <div className="flex justify-between items-center px-6 py-4 max-w-7xl mx-auto">
+
+            {/* Logo + Name */}
             <Link href="/" className="flex items-center gap-3">
-              {/* Using the attached company logo */}
-              <img src="/logo.jpeg" alt="Allied One Logo" className="h-10 w-auto object-contain" />
-              <span className="font-extrabold text-2xl text-brand-blue tracking-tight">Allied One</span>
+              <img
+                src="/logo.png"
+                alt="Allied One Logo"
+                className="h-10 w-auto object-contain"
+              />
+              <span className="font-extrabold text-xl text-brand-navy tracking-tight">AlliedOne</span>
             </Link>
-            
-            <div className="hidden md:flex gap-8 text-sm font-semibold text-slate-600">
-              <Link href="/" className="hover:text-brand-accent transition-colors">Home</Link>
-              <Link href="/services" className="hover:text-brand-accent transition-colors">Services</Link>
-              <Link href="/about" className="hover:text-brand-accent transition-colors">About</Link>
-              <Link href="/contact" className="hover:text-brand-accent transition-colors">Contact</Link>
+
+            {/* Desktop nav links */}
+            <div className="hidden md:flex gap-8 text-sm font-semibold text-brand-muted">
+              <Link href="/" className="hover:text-brand-blue transition-colors">Home</Link>
+              <Link href="/services" className="hover:text-brand-blue transition-colors">Services</Link>
+              <Link href="/about" className="hover:text-brand-blue transition-colors">About</Link>
+              <Link href="/contact" className="hover:text-brand-blue transition-colors">Contact</Link>
             </div>
-            
-            <Link href="/contact" className="bg-brand-accent text-white px-6 py-2.5 rounded-full text-sm font-semibold hover:bg-brand-blue transition-all shadow-md">
+
+            {/* CTA Button */}
+            <Link
+              href="/contact"
+              className="bg-brand-gold text-white px-6 py-2.5 rounded-full text-sm font-bold hover:bg-brand-goldHov transition-all shadow-md"
+            >
               Schedule a Demo
             </Link>
           </div>
         </nav>
 
-        {/* Page Content */}
+        {/* ── Page Content ── */}
         <main className="flex-grow">{children}</main>
 
-        {/* Structured Corporate Footer */}
-        <footer className="bg-brand-blue text-slate-300 py-16 border-t border-blue-900 mt-20">
-          <div className="max-w-7xl mx-auto px-6 grid grid-cols-1 md:grid-cols-4 gap-12">
-            
-            {/* Brand Column */}
-            <div className="col-span-1 md:col-span-1">
-              <span className="font-extrabold text-2xl text-white tracking-tight block mb-4">Allied One</span>
-              <p className="text-sm text-slate-300 leading-relaxed">
-                Transforming businesses through intelligent AI automation, operational efficiency, and data-driven digital strategies.
-              </p>
+        {/* ── Footer ── */}
+        <footer className="bg-brand-navy text-slate-300 pt-16 pb-8 mt-20">
+          <div className="max-w-7xl mx-auto px-6">
+
+            {/* Top 4-col grid */}
+            <div className="grid grid-cols-1 md:grid-cols-4 gap-12 pb-12 border-b border-slate-700">
+
+              {/* Brand column */}
+              <div className="md:col-span-1">
+                <div className="flex items-center gap-3 mb-4">
+                  <img src="/logo.png" alt="Allied One Logo" className="h-10 w-auto brightness-[5]" />
+                  <span className="font-extrabold text-xl text-white tracking-tight">Allied One</span>
+                </div>
+                <p className="text-sm text-slate-400 leading-relaxed">
+                  Empowering businesses with intelligent AI automation, digital marketing, and operational efficiency.
+                </p>
+                {/* Social Links */}
+                <div className="flex gap-4 mt-5">
+                  <a href="#" aria-label="LinkedIn"
+                    className="w-8 h-8 rounded-full bg-slate-700 hover:bg-brand-mid flex items-center justify-center transition-colors">
+                    <svg className="w-4 h-4 text-white fill-current" viewBox="0 0 24 24">
+                      <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z" />
+                    </svg>
+                  </a>
+                  <a href="#" aria-label="Facebook"
+                    className="w-8 h-8 rounded-full bg-slate-700 hover:bg-brand-mid flex items-center justify-center transition-colors">
+                    <svg className="w-4 h-4 text-white fill-current" viewBox="0 0 24 24">
+                      <path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z" />
+                    </svg>
+                  </a>
+                </div>
+              </div>
+
+              {/* Services column */}
+              <div>
+                <h4 className="text-white font-bold mb-5 uppercase text-xs tracking-widest">Services</h4>
+                <ul className="space-y-3 text-sm text-slate-400">
+                  <li><Link href="/services" className="hover:text-white transition-colors">AI Business Consulting</Link></li>
+                  <li><Link href="/services" className="hover:text-white transition-colors">Process Automation</Link></li>
+                  <li><Link href="/services" className="hover:text-white transition-colors">Digital Marketing & AI</Link></li>
+                  <li><Link href="/services" className="hover:text-white transition-colors">AI Automation & Chatbots</Link></li>
+                  <li><Link href="/services" className="hover:text-white transition-colors">AI Content Studio</Link></li>
+                </ul>
+              </div>
+
+              {/* Company column */}
+              <div>
+                <h4 className="text-white font-bold mb-5 uppercase text-xs tracking-widest">Company</h4>
+                <ul className="space-y-3 text-sm text-slate-400">
+                  <li><Link href="/about" className="hover:text-white transition-colors">About Us</Link></li>
+                  <li><Link href="/contact" className="hover:text-white transition-colors">Contact</Link></li>
+                  <li><Link href="#" className="hover:text-white transition-colors">Privacy Policy</Link></li>
+                  <li><Link href="#" className="hover:text-white transition-colors">Terms of Service</Link></li>
+                </ul>
+              </div>
+
+              {/* Contact / CTA column */}
+              <div>
+                <h4 className="text-white font-bold mb-5 uppercase text-xs tracking-widest">Get in Touch</h4>
+                <p className="text-sm text-slate-400 mb-5 leading-relaxed">
+                  Ready to transform your business with AI? Let's talk.
+                </p>
+                <Link
+                  href="/contact"
+                  className="inline-block bg-brand-gold text-white px-5 py-2.5 rounded-lg text-sm font-bold hover:bg-brand-goldHov transition-all"
+                >
+                  Schedule a Demo &rarr;
+                </Link>
+              </div>
             </div>
 
-            {/* Services Column */}
-            <div>
-              <h4 className="text-white font-bold mb-4 uppercase text-xs tracking-wider">Services</h4>
-              <ul className="space-y-3 text-sm">
-                <li><Link href="/services" className="hover:text-white transition-colors">AI Business Consulting</Link></li>
-                <li><Link href="/services" className="hover:text-white transition-colors">Process Automation</Link></li>
-                <li><Link href="/services" className="hover:text-white transition-colors">Digital Marketing & AI</Link></li>
-              </ul>
+            {/* Bottom bar */}
+            <div className="pt-8 flex flex-col md:flex-row justify-between items-center gap-4 text-xs text-slate-500">
+              <p>&copy; {new Date().getFullYear()} Allied One Ltd. All rights reserved.</p>
+              <p>Built with AI &middot; Powered by Innovation</p>
             </div>
-
-            {/* Company Column */}
-            <div>
-              <h4 className="text-white font-bold mb-4 uppercase text-xs tracking-wider">Company</h4>
-              <ul className="space-y-3 text-sm">
-                <li><Link href="/about" className="hover:text-white transition-colors">About Us</Link></li>
-                <li><Link href="/contact" className="hover:text-white transition-colors">Contact</Link></li>
-                <li><Link href="#" className="hover:text-white transition-colors">Privacy Policy</Link></li>
-              </ul>
-            </div>
-
-            {/* Contact Column */}
-            <div>
-              <h4 className="text-white font-bold mb-4 uppercase text-xs tracking-wider">Connect</h4>
-              <Link href="/contact" className="inline-block border border-slate-500 text-white px-5 py-2 rounded-lg text-sm font-medium hover:bg-white hover:text-brand-blue transition-all">
-                Get in Touch
-              </Link>
-            </div>
-
-          </div>
-          <div className="max-w-7xl mx-auto px-6 pt-12 mt-12 border-t border-slate-700/50 text-sm text-slate-400 flex justify-between items-center">
-            <p>&copy; {new Date().getFullYear()} Allied One Ltd. All rights reserved.</p>
           </div>
         </footer>
       </body>
