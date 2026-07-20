@@ -34,17 +34,17 @@ export default function RootLayout({
             </Link>
 
             {/* Desktop nav links */}
-            <div className="hidden md:flex gap-8 text-sm font-semibold text-brand-muted">
-              <Link href="/" className="hover:text-brand-blue transition-colors">Home</Link>
-              <Link href="/services" className="hover:text-brand-blue transition-colors">Services</Link>
-              <Link href="/about" className="hover:text-brand-blue transition-colors">About</Link>
-              <Link href="/contact" className="hover:text-brand-blue transition-colors">Contact</Link>
+            <div className="hidden md:flex gap-8 text-sm font-semibold text-[#0D3A5C]">
+              <Link href="/" className="hover:text-[#1A5C8A] transition-colors">Home</Link>
+              <Link href="/services" className="hover:text-[#1A5C8A] transition-colors">Services</Link>
+              <Link href="/about" className="hover:text-[#1A5C8A] transition-colors">About</Link>
+              <Link href="/contact" className="hover:text-[#1A5C8A] transition-colors">Contact</Link>
             </div>
 
             {/* CTA Button */}
             <Link
               href="/contact"
-              className="bg-brand-gold text-white px-6 py-2.5 rounded-full text-sm font-bold hover:bg-brand-goldHov transition-all shadow-md"
+              className="bg-[#1A5C8A] text-white px-6 py-2.5 rounded-full text-sm font-bold hover:bg-[#0D3A5C] transition-all shadow-md"
             >
               Schedule a Demo
             </Link>
@@ -55,19 +55,21 @@ export default function RootLayout({
         <main className="flex-grow">{children}</main>
 
         {/* ── Footer ── */}
-        <footer className="bg-brand-navy text-slate-300 pt-16 pb-8 mt-20">
+        <footer className="bg-[#0D3A5C] text-slate-100 pt-16 pb-8 mt-20">
           <div className="max-w-7xl mx-auto px-6">
 
             {/* Top 4-col grid */}
-            <div className="grid grid-cols-1 md:grid-cols-4 gap-12 pb-12 border-b border-slate-700">
+            <div className="grid grid-cols-1 md:grid-cols-4 gap-12 pb-12 border-b border-[#1A5C8A]">
 
               {/* Brand column */}
               <div className="md:col-span-1">
-                <div className="flex items-center gap-3 mb-4">
-                  <img src="/logo.png" alt="Allied One Logo" className="h-10 w-auto brightness-[5]" />
-                  <span className="font-extrabold text-xl text-white tracking-tight">Allied One</span>
+                <div className="flex items-center gap-3 mb-5">
+                  <div className="bg-white p-2 rounded-xl inline-flex items-center justify-center">
+                    <img src="/logo.png" alt="Allied One Logo" className="h-8 w-auto object-contain" />
+                  </div>
+                  <span className="font-extrabold text-2xl text-white tracking-tight">Allied One</span>
                 </div>
-                <p className="text-sm text-slate-400 leading-relaxed">
+                <p className="text-sm text-slate-200 leading-relaxed">
                   Empowering businesses with intelligent AI automation, digital marketing, and operational efficiency.
                 </p>
                 {/* Social Links */}
@@ -90,35 +92,35 @@ export default function RootLayout({
               {/* Services column */}
               <div>
                 <h4 className="text-white font-bold mb-5 uppercase text-xs tracking-widest">Services</h4>
-                <ul className="space-y-3 text-sm text-slate-400">
-                  <li><Link href="/services" className="hover:text-white transition-colors">AI Business Consulting</Link></li>
-                  <li><Link href="/services" className="hover:text-white transition-colors">Process Automation</Link></li>
-                  <li><Link href="/services" className="hover:text-white transition-colors">Digital Marketing & AI</Link></li>
-                  <li><Link href="/services" className="hover:text-white transition-colors">AI Automation & Chatbots</Link></li>
-                  <li><Link href="/services" className="hover:text-white transition-colors">AI Content Studio</Link></li>
+                <ul className="space-y-3 text-sm text-slate-200">
+                  <li><Link href="/services" className="hover:text-white hover:underline transition-all">AI Business Consulting</Link></li>
+                  <li><Link href="/services" className="hover:text-white hover:underline transition-all">Process Automation</Link></li>
+                  <li><Link href="/services" className="hover:text-white hover:underline transition-all">Digital Marketing & AI</Link></li>
+                  <li><Link href="/services" className="hover:text-white hover:underline transition-all">AI Automation & Chatbots</Link></li>
+                  <li><Link href="/services" className="hover:text-white hover:underline transition-all">AI Content Studio</Link></li>
                 </ul>
               </div>
 
               {/* Company column */}
               <div>
                 <h4 className="text-white font-bold mb-5 uppercase text-xs tracking-widest">Company</h4>
-                <ul className="space-y-3 text-sm text-slate-400">
-                  <li><Link href="/about" className="hover:text-white transition-colors">About Us</Link></li>
-                  <li><Link href="/contact" className="hover:text-white transition-colors">Contact</Link></li>
-                  <li><Link href="#" className="hover:text-white transition-colors">Privacy Policy</Link></li>
-                  <li><Link href="#" className="hover:text-white transition-colors">Terms of Service</Link></li>
+                <ul className="space-y-3 text-sm text-slate-200">
+                  <li><Link href="/about" className="hover:text-white hover:underline transition-all">About Us</Link></li>
+                  <li><Link href="/contact" className="hover:text-white hover:underline transition-all">Contact</Link></li>
+                  <li><Link href="#" className="hover:text-white hover:underline transition-all">Privacy Policy</Link></li>
+                  <li><Link href="#" className="hover:text-white hover:underline transition-all">Terms of Service</Link></li>
                 </ul>
               </div>
 
               {/* Contact / CTA column */}
               <div>
                 <h4 className="text-white font-bold mb-5 uppercase text-xs tracking-widest">Get in Touch</h4>
-                <p className="text-sm text-slate-400 mb-5 leading-relaxed">
+                <p className="text-sm text-slate-200 mb-5 leading-relaxed">
                   Ready to transform your business with AI? Let's talk.
                 </p>
                 <Link
                   href="/contact"
-                  className="inline-block bg-brand-gold text-white px-5 py-2.5 rounded-lg text-sm font-bold hover:bg-brand-goldHov transition-all"
+                  className="inline-block bg-white text-[#0D3A5C] px-5 py-2.5 rounded-lg text-sm font-bold hover:bg-slate-200 transition-all"
                 >
                   Schedule a Demo &rarr;
                 </Link>
@@ -126,9 +128,8 @@ export default function RootLayout({
             </div>
 
             {/* Bottom bar */}
-            <div className="pt-8 flex flex-col md:flex-row justify-between items-center gap-4 text-xs text-slate-500">
+            <div className="pt-8 flex flex-col md:flex-row justify-between items-center gap-4 text-xs text-slate-300">
               <p>&copy; {new Date().getFullYear()} Allied One Ltd. All rights reserved.</p>
-              <p>Built with AI &middot; Powered by Innovation</p>
             </div>
           </div>
         </footer>

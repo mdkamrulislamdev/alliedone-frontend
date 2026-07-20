@@ -6,41 +6,41 @@ export default function Home() {
     <div className="w-full">
 
       {/* ══════════════════════════════════════════════
-          HERO — Full-bleed gradient banner
+          HERO — Full-bleed banner
       ══════════════════════════════════════════════ */}
-      <section className="bg-hero-gradient relative overflow-hidden">
+      <section className="bg-[#0D3A5C] relative overflow-hidden">
         {/* Decorative background rings */}
         <div className="absolute inset-0 pointer-events-none">
-          <div className="absolute -top-32 -right-32 w-[600px] h-[600px] rounded-full border border-white/5"></div>
-          <div className="absolute -bottom-20 -left-20 w-[400px] h-[400px] rounded-full border border-white/5"></div>
+          <div className="absolute -top-32 -right-32 w-[600px] h-[600px] rounded-full border border-white/10"></div>
+          <div className="absolute -bottom-20 -left-20 w-[400px] h-[400px] rounded-full border border-white/10"></div>
         </div>
 
         <div className="max-w-7xl mx-auto px-6 py-28 md:py-36 relative z-10">
           <div className="max-w-3xl">
-            <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white/10 text-brand-light text-xs font-bold mb-8 uppercase tracking-widest border border-white/20">
-              <span className="w-2 h-2 rounded-full bg-brand-gold animate-pulse"></span>
+            <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-[#1A5C8A] text-slate-100 text-xs font-bold mb-8 uppercase tracking-widest border border-white/20">
+              <span className="w-2 h-2 rounded-full bg-[#2180C0] animate-pulse"></span>
               Enterprise AI Solutions
             </div>
 
             <h1 className="text-5xl md:text-6xl lg:text-7xl font-extrabold tracking-tight text-white mb-6 leading-[1.1]">
               Automate. Scale.{" "}
-              <span className="text-brand-gold">Dominate.</span>
+              <span className="text-[#2180C0]">Dominate.</span>
             </h1>
 
-            <p className="text-lg md:text-xl text-slate-300 mb-10 leading-relaxed max-w-2xl">
+            <p className="text-lg md:text-xl text-slate-200 mb-10 leading-relaxed max-w-2xl">
               Allied One architects and deploys custom AI automation, business process workflows, and intelligent digital marketing systems — so your business grows on autopilot.
             </p>
 
             <div className="flex flex-col sm:flex-row gap-4">
               <Link
                 href="/contact"
-                className="bg-brand-gold text-white px-8 py-4 rounded-full font-bold hover:bg-brand-goldHov transition-all shadow-lg hover:shadow-xl text-center text-base"
+                className="bg-[#2180C0] text-white px-8 py-4 rounded-full font-bold hover:bg-[#1A5C8A] transition-all shadow-lg text-center text-base"
               >
                 Start Your AI Journey
               </Link>
               <Link
                 href="/services"
-                className="bg-white/10 text-white px-8 py-4 rounded-full font-bold border border-white/30 hover:bg-white/20 transition-all text-center text-base backdrop-blur-sm"
+                className="bg-white text-[#0D3A5C] px-8 py-4 rounded-full font-bold border border-white hover:bg-slate-100 transition-all text-center text-base shadow-lg"
               >
                 Explore Services
               </Link>
@@ -49,7 +49,7 @@ export default function Home() {
         </div>
 
         {/* Bottom fade */}
-        <div className="h-16 bg-gradient-to-b from-transparent to-brand-slate absolute bottom-0 left-0 right-0"></div>
+        <div className="h-16 bg-gradient-to-b from-transparent to-[#F0F4F8] absolute bottom-0 left-0 right-0"></div>
       </section>
 
       {/* ══════════════════════════════════════════════
@@ -138,7 +138,7 @@ export default function Home() {
       {/* ══════════════════════════════════════════════
           FULL SERVICE CATALOGUE — All 8 lines
       ══════════════════════════════════════════════ */}
-      <section className="py-24 bg-brand-slate">
+      <section className="py-24 bg-[#F0F4F8]">
         <div className="max-w-7xl mx-auto px-6">
           <div className="text-center mb-14">
             <span className="text-brand-mid text-sm font-bold uppercase tracking-widest">Full Portfolio</span>
@@ -202,71 +202,42 @@ export default function Home() {
       </section>
 
       {/* ══════════════════════════════════════════════
-          CRM / MDS HIGHLIGHT — Sprint deliverable
-      ══════════════════════════════════════════════ */}
-      <section className="py-20 bg-hero-gradient relative overflow-hidden">
-        <div className="absolute inset-0 pointer-events-none">
-          <div className="absolute top-10 right-10 w-80 h-80 rounded-full bg-white/5 blur-3xl"></div>
-        </div>
-        <div className="max-w-7xl mx-auto px-6 flex flex-col md:flex-row items-center gap-12 relative z-10">
-          <div className="flex-1">
-            <span className="text-brand-gold text-sm font-bold uppercase tracking-widest">Live CRM + MDS Pipeline</span>
-            <h2 className="text-3xl md:text-4xl font-extrabold text-white mt-3 mb-5">Your Leads. Captured. Stored. Ready.</h2>
-            <p className="text-slate-300 text-lg leading-relaxed mb-8">
-              Every contact form submission on this site flows directly into our live CRM directory and is simultaneously logged into our Modern Data Stack — ready for future analytics, reporting, and automation triggers.
-            </p>
-            <div className="flex flex-wrap gap-4 text-sm">
-              {["Real-time CRM capture", "MDS ingestion log", "Status tracking", "Timestamped records"].map((feat) => (
-                <span key={feat} className="px-4 py-2 bg-white/10 border border-white/20 text-white rounded-full font-medium backdrop-blur-sm">✓ {feat}</span>
-              ))}
-            </div>
-          </div>
-          <div className="flex-shrink-0">
-            <Link
-              href="/contact"
-              className="inline-block bg-brand-gold text-white px-8 py-4 rounded-full font-bold hover:bg-brand-goldHov transition-all shadow-xl text-lg"
-            >
-              Submit Your Details &rarr;
-            </Link>
-          </div>
-        </div>
-      </section>
-
-      {/* ══════════════════════════════════════════════
           AD-BOT HIGHLIGHT — Sprint deliverable H
       ══════════════════════════════════════════════ */}
-      <section className="py-24 bg-brand-slate">
+      <section className="py-24 bg-[#F0F4F8]">
         <div className="max-w-7xl mx-auto px-6 grid grid-cols-1 md:grid-cols-2 gap-16 items-center">
-          {/* Visual mock */}
-          <div className="bg-white rounded-2xl shadow-soft p-8 border border-slate-100">
-            <div className="flex items-center gap-3 mb-6 pb-4 border-b border-slate-100">
-              <div className="w-10 h-10 rounded-full bg-brand-blue flex items-center justify-center">
-                <svg className="w-5 h-5 text-white" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2C6.477 2 2 6.477 2 12c0 1.89.525 3.66 1.438 5.168L2 22l4.832-1.438A9.96 9.96 0 0012 22c5.523 0 10-4.477 10-10S17.523 2 12 2z"/></svg>
+          {/* Visual mock - Simplistic UI */}
+          <div className="bg-white rounded-3xl shadow-sm p-8 border border-slate-200">
+            <div className="flex items-center gap-4 mb-6 pb-6 border-b border-slate-100">
+              <div className="w-12 h-12 rounded-2xl bg-[#0D3A5C] flex items-center justify-center shadow-inner">
+                <svg className="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M8 10h.01M12 10h.01M16 10h.01M9 16H5a2 2 0 01-2-2V6a2 2 0 012-2h14a2 2 0 012 2v8a2 2 0 01-2 2h-5l-5 5v-5z"/></svg>
               </div>
               <div>
-                <p className="text-xs text-brand-muted">Allied One Bot &bull; Instant Response</p>
-                <p className="text-xs text-green-500 font-medium">● Online</p>
+                <p className="text-sm font-bold text-[#0D3A5C]">Allied One Assistant</p>
+                <div className="flex items-center gap-1.5 mt-1">
+                  <span className="w-2 h-2 rounded-full bg-emerald-400 animate-pulse"></span>
+                  <span className="text-xs font-medium text-slate-500 uppercase tracking-widest">Active Now</span>
+                </div>
               </div>
             </div>
-            <div className="space-y-3 text-sm">
-              <div className="bg-brand-light rounded-lg rounded-tl-none p-3 max-w-xs text-brand-dark">
-                Hi! Thanks for your interest. Here's what Allied One offers: 🤖
+            
+            <div className="space-y-4 text-sm font-medium">
+              <div className="bg-slate-50 rounded-2xl rounded-tl-none p-4 max-w-[85%] text-slate-800 border border-slate-100">
+                Hi! Thanks for reaching out. What can we help you build?
               </div>
-              <div className="bg-brand-light rounded-lg rounded-tl-none p-3 max-w-xs text-brand-dark leading-relaxed">
-                ✅ AI Automation & Chatbots<br/>
-                ✅ AI Business Consulting<br/>
-                ✅ Process Automation<br/>
-                ✅ Digital Marketing & AI<br/>
-                ✅ AI Content Studio<br/>
-                <span className="text-brand-muted text-xs mt-1 block">...and more. Reply to learn about any service!</span>
+              <div className="bg-[#1A5C8A] rounded-2xl rounded-tr-none p-4 max-w-[85%] ml-auto text-white shadow-md">
+                I'd like to automate my customer support and leads.
+              </div>
+              <div className="bg-slate-50 rounded-2xl rounded-tl-none p-4 max-w-[95%] text-slate-800 border border-slate-100 leading-relaxed">
+                Perfect. We can deploy a custom AI agent directly to your Facebook or LinkedIn channels within 48 hours. Should we schedule a quick demo?
               </div>
             </div>
           </div>
 
           {/* Text */}
           <div>
-            <span className="text-brand-mid text-sm font-bold uppercase tracking-widest">Service Line H</span>
-            <h2 className="text-3xl md:text-4xl font-extrabold text-brand-navy mt-2 mb-5">Instant AI Responses to Your Ads</h2>
+            <span className="text-[#2180C0] text-sm font-bold uppercase tracking-widest">Digital Marketing + AI</span>
+            <h2 className="text-3xl md:text-4xl font-extrabold text-[#0D3A5C] mt-3 mb-5">Instant AI Responses to Your Ads</h2>
             <p className="text-brand-muted text-lg leading-relaxed mb-6">
               When someone comments on, clicks, or messages via your Facebook or LinkedIn ad, our AI bot sends them an instant, personalized services list — keeping your brand responsive 24/7 without any manual effort.
             </p>
@@ -293,15 +264,15 @@ export default function Home() {
       {/* ══════════════════════════════════════════════
           CONTACT FORM — Embedded on homepage
       ══════════════════════════════════════════════ */}
-      <section className="py-24 bg-white border-t border-slate-100" id="contact">
+      <section className="py-24 bg-white" id="contact">
         <div className="max-w-7xl mx-auto px-6">
-          <div className="text-center mb-12">
-            <span className="text-brand-mid text-sm font-bold uppercase tracking-widest">Work With Us</span>
-            <h2 className="text-3xl md:text-4xl font-extrabold text-brand-navy mt-2 mb-4">
-              Ready to <span className="text-brand-mid">Automate?</span>
+          <div className="text-center mb-14">
+            <span className="text-[#2180C0] text-sm font-bold uppercase tracking-widest">Connect With Us</span>
+            <h2 className="text-4xl md:text-5xl font-extrabold text-[#0D3A5C] mt-4 mb-6">
+              Let's Build Your <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#2180C0] to-[#0D3A5C]">AI Future.</span>
             </h2>
-            <p className="text-brand-muted max-w-2xl mx-auto text-lg">
-              Fill out the form below and our team will get back to you with a tailored strategy for your business.
+            <p className="text-slate-500 max-w-2xl mx-auto text-lg leading-relaxed">
+              Drop us a message below. Whether it's a simple automation workflow or a comprehensive enterprise AI rollout, our engineering team is ready to deliver.
             </p>
           </div>
           <LeadCaptureForm />
