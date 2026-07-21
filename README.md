@@ -48,6 +48,60 @@ The application will be accessible at [http://localhost:3000](http://localhost:3
 - **Forms & Validation**: `react-hook-form` integrated with `zod` for strict client-side validation.
 - **Routing**: Next.js native file-system routing.
 
+## 🔄 Request Flows
+
+<details>
+<summary>Click to view the End-to-End Contact Form Request Flow</summary>
+
+### Flowchart
+
+```mermaid
+sequenceDiagram
+    autonumber
+    
+    actor User
+    box Frontend (Next.js / React)
+        participant UI as LeadCaptureForm.tsx
+        participant Form as react-hook-form (Zod)
+    end
+    box Backend (Express.js)
+        participant Route as lead.routes.ts
+        participant Middleware as validateBody
+        participant Controller as lead.controller.ts
+        participant Service as lead.service.ts
+    end
+    box Database (PostgreSQL)
+        participant DB as Prisma Client
+    end
+
+    User->>UI: Clicks "Send Message"
+    UI->>Form: onSubmit(data)
+    Form->>Form: Validates data against Zod leadSchema
+    Form->>UI: set isSubmitting(true)
+    UI->>Route: fetch POST /api/leads
+    
+    Route->>Middleware: intercept with validateBody
+    Middleware->>Middleware: Validates body against Zod createLeadSchema
+    Middleware->>Controller: createLead(req, res)
+    
+    Controller->>Service: createLeadTransaction(req.body)
+    Service->>DB: prisma.$transaction()
+    DB->>DB: tx.lead.create(...)
+    DB->>DB: tx.mdsIngestionLog.create(...)
+    DB-->>Service: returns newLead
+    
+    Service-->>Controller: returns newLead
+    Controller-->>Route: res.status(201).json(...)
+    
+    Route-->>UI: HTTP 201 Created Response
+    UI->>Form: response.ok is true
+    UI->>UI: setSubmitStatus("success")
+    UI->>Form: reset() form fields
+    UI->>UI: set isSubmitting(false)
+    UI-->>User: Displays green success message
+```
+</details>
+
 ---
 
 ## 🤝 Contributing & Best Practices
