@@ -9,7 +9,11 @@ import * as z from "zod";
 const leadSchema = z.object({
   name: z.string().min(2, "Name is required"),
   company: z.string().optional(),
-  contactInfo: z.string().min(5, "Email or phone number is required"),
+  contactInfo: z.string().min(5, "Email or phone number is required").refine(val => {
+    const isEmail = /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(val);
+    const isPhone = /^\+?[\d\s\-\(\)]{7,20}$/.test(val);
+    return isEmail || isPhone;
+  }, "Must be a valid email address or phone number"),
   serviceInterest: z.enum([
     "AI_OPPORTUNITY_CONSULTING",
     "PROCESS_AUTOMATION_STRATEGY",
