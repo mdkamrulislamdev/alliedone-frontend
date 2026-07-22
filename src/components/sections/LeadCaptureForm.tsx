@@ -11,9 +11,13 @@ const leadSchema = z.object({
   company: z.string().optional(),
   contactInfo: z.string().min(5, "Email or phone number is required"),
   serviceInterest: z.enum([
-    "B_AI_BUSINESS_CONSULTING",
-    "F_BUSINESS_PROCESS_AUTOMATION",
-    "H_DIGITAL_MARKETING_AI",
+    "AI_OPPORTUNITY_CONSULTING",
+    "PROCESS_AUTOMATION_STRATEGY",
+    "WHATSAPP_BOTS_STRATEGY",
+    "EMAIL_AUTOMATION_CONSULTING",
+    "ATS_HR_TECH_ARCHITECTURE",
+    "DIGITAL_MARKETING_AGENCY",
+    "AI_CONTENT_STUDIO",
     "OTHER",
   ]),
   notes: z.string().optional(),
@@ -117,9 +121,13 @@ export default function LeadCaptureForm() {
             {...register("serviceInterest")}
             className="w-full px-4 py-3 rounded-xl border border-slate-200 bg-slate-50 focus:bg-white focus:ring-2 focus:ring-[#2180C0] focus:border-transparent outline-none transition-all text-slate-800 appearance-none"
           >
-            <option value="B_AI_BUSINESS_CONSULTING">AI Business Consulting</option>
-            <option value="F_BUSINESS_PROCESS_AUTOMATION">Business Process Automation</option>
-            <option value="H_DIGITAL_MARKETING_AI">Digital Marketing + AI Agency</option>
+            <option value="AI_OPPORTUNITY_CONSULTING">AI Opportunity & Implementation</option>
+            <option value="PROCESS_AUTOMATION_STRATEGY">Process Automation Strategy</option>
+            <option value="WHATSAPP_BOTS_STRATEGY">WhatsApp & Messaging Bots</option>
+            <option value="EMAIL_AUTOMATION_CONSULTING">Email Automation Consulting</option>
+            <option value="ATS_HR_TECH_ARCHITECTURE">ATS & HR Tech Architecture</option>
+            <option value="DIGITAL_MARKETING_AGENCY">Digital Marketing Agency</option>
+            <option value="AI_CONTENT_STUDIO">AI Content Studio</option>
             <option value="OTHER">Other / General Inquiry</option>
           </select>
         </div>
