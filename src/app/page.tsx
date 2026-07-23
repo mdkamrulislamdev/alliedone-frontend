@@ -44,7 +44,7 @@ export default function Home() {
             </h1>
 
             <p className="text-lg md:text-xl text-slate-300 mb-12 leading-relaxed max-w-2xl">
-              Allied One architects and deploys custom AI automation, business process workflows, and intelligent digital marketing systems — so your business grows on autopilot.
+              AlliedOne architects and deploys custom AI automation, business process workflows, and intelligent digital systems — so your business grows on autopilot.
             </p>
 
             <div className="flex flex-col sm:flex-row gap-4">
@@ -173,7 +173,7 @@ export default function Home() {
         <div className="max-w-7xl mx-auto px-6">
           <SectionHeader
             eyebrow="Our Process"
-            title="How Allied One Works"
+            title="How AlliedOne Works"
             subtitle="From discovery to deployment, we handle every step with precision."
           />
 
@@ -211,7 +211,7 @@ export default function Home() {
                 <Bot className="w-5 h-5 text-white" />
               </div>
               <div>
-                <p className="text-sm font-bold text-[#0D3A5C]">Allied One Assistant</p>
+                <p className="text-sm font-bold text-[#0D3A5C]">AlliedOne Assistant</p>
                 <div className="flex items-center gap-1.5 mt-0.5">
                   <span className="w-1.5 h-1.5 rounded-full bg-emerald-400 animate-pulse"></span>
                   <span className="text-xs text-slate-400 font-medium">Online</span>

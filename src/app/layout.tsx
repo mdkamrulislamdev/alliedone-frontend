@@ -6,7 +6,7 @@ import "./globals.css";
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: "AlliedOne | AI & Digital Solutions",
+  title: "AlliedOne Limited | AI & Digital Solutions",
   description: "Enterprise AI Automation, Consulting, and Digital Marketing",
 };
 
@@ -27,7 +27,7 @@ export default function RootLayout({
             <Link href="/" className="flex items-center gap-3">
               <img
                 src="/logo.png"
-                alt="Allied One Logo"
+                alt="AlliedOne Logo"
                 className="h-10 w-auto object-contain"
               />
               <span className="font-extrabold text-xl text-brand-navy tracking-tight">AlliedOne</span>
@@ -65,13 +65,17 @@ export default function RootLayout({
               <div className="md:col-span-1">
                 <div className="flex items-center gap-3 mb-5">
                   <div className="bg-white p-2 rounded-xl inline-flex items-center justify-center">
-                    <img src="/logo.png" alt="Allied One Logo" className="h-8 w-auto object-contain" />
+                    <img src="/logo.png" alt="AlliedOne Logo" className="h-8 w-auto object-contain" />
                   </div>
-                  <span className="font-extrabold text-2xl text-white tracking-tight">Allied One</span>
+                  <span className="font-extrabold text-2xl text-white tracking-tight">AlliedOne</span>
                 </div>
-                <p className="text-sm text-slate-200 leading-relaxed">
-                  Empowering businesses with intelligent AI automation, digital marketing, and operational efficiency.
+                <p className="text-sm text-slate-200 leading-relaxed mb-4">
+                  Empowering businesses with intelligent AI automation, digital transformation, and global trade solutions.
                 </p>
+                <div className="text-sm text-slate-300 space-y-1 mb-5">
+                  <p><strong>Head Office:</strong> Dhaka, Bangladesh</p>
+                  <p><strong>Email:</strong> info@alliedoneltd.com</p>
+                </div>
                 {/* Social Links */}
                 <div className="flex gap-4 mt-5">
                   <a href="#" aria-label="LinkedIn"
@@ -129,7 +133,7 @@ export default function RootLayout({
 
             {/* Bottom bar */}
             <div className="pt-8 flex flex-col md:flex-row justify-between items-center gap-4 text-xs text-slate-300">
-              <p>&copy; {new Date().getFullYear()} Allied One Ltd. All rights reserved.</p>
+              <p>&copy; {new Date().getFullYear()} AlliedOne Limited. All rights reserved.</p>
             </div>
           </div>
         </footer>
