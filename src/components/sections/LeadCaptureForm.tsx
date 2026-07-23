@@ -68,8 +68,8 @@ export default function LeadCaptureForm() {
 
   return (
     <div className="bg-white p-8 md:p-12 rounded-3xl shadow-sm border border-slate-200 max-w-2xl mx-auto">
-      <h3 className="text-2xl md:text-3xl font-extrabold text-[#0D3A5C] mb-3">Let's discuss your project</h3>
-      <p className="text-slate-500 text-sm md:text-base mb-8">Tell us a bit about your business and what you're looking to achieve.</p>
+      <h3 className="text-2xl md:text-3xl font-extrabold text-[#0D3A5C] mb-3">Let&apos;s discuss your project</h3>
+      <p className="text-slate-500 text-sm md:text-base mb-8">Tell us a bit about your business and what you&apos;re looking to achieve.</p>
       
       {submitStatus === "success" && (
         <div className="mb-6 p-4 bg-green-50 text-green-800 rounded-lg text-sm font-medium border border-green-100">

@@ -120,7 +120,7 @@ export default function RootLayout({
               <div>
                 <h4 className="text-white font-bold mb-5 uppercase text-xs tracking-widest">Get in Touch</h4>
                 <p className="text-sm text-slate-200 mb-5 leading-relaxed">
-                  Ready to transform your business with AI? Let's talk.
+                  Ready to transform your business with AI? Let&apos;s talk.
                 </p>
                 <Link
                   href="/contact"
